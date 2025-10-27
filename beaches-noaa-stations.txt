@@ -1,0 +1,271 @@
+COMPREHENSIVE LIST OF BEACHES AND THEIR ASSIGNED NOAA STATIONS
+================================================================
+
+Total Beaches: 318
+Last Updated: 2025-10-24
+
+Format: Beach Name | State | NOAA Station ID | Water Temp Station (if different)
+
+---
+
+1. Miami Beach | Florida | 8723214
+2. Santa Monica Beach | California | 9410840
+3. Waikiki Beach | Hawaii | 1612340
+4. Myrtle Beach | South Carolina | 8661070
+5. Outer Banks | North Carolina | 8652587
+6. Amelia Island | Florida | 8720030
+7. Anna Maria Island | Florida | 8726520
+8. Asbury Park | New Jersey | 8531680
+9. Assateague Island | Maryland | 8570283
+10. Atlantic City | New Jersey | 8534720
+11. Avalon Beach | New Jersey | 8536110
+12. Avon | North Carolina | 8654467
+13. Bal Harbour | Florida | 8723214
+14. Bandon Beach | Oregon | 9431647
+15. Bar Harbor | Maine | 8413320
+16. Barnegat Light | New Jersey | 8534720 | Water Temp: 8534720
+17. Beach Haven | New Jersey | 8534720 | Water Temp: 8534720
+18. Belleair Beach | Florida | 8726520
+19. Belmar | New Jersey | 8531680
+20. Bethany Beach | Delaware | 8557380
+21. Big Pine Key | Florida | 8724580
+22. Biloxi Beach | Mississippi | 8747437
+23. Block Island | Rhode Island | 8452660
+24. Boca Grande | Florida | 8725110
+25. Bolivar Peninsula | Texas | 8771450
+26. Bonita Springs | Florida | 8725110
+27. Bradley Beach | New Jersey | 8531680
+28. Brant Beach | New Jersey | 8534720 | Water Temp: 8534720
+29. Brookings Beach | Oregon | 9431647
+30. Brownsville Beach | Texas | 8779770
+31. Buxton | North Carolina | 8654467
+32. Caladesi Island | Florida | 8726520
+33. Cannon Beach | Oregon | 9435380
+34. Cape Cod National Seashore | Massachusetts | 8447930
+35. Cape Hatteras | North Carolina | 8654467
+36. Cape May | New Jersey | 8536110
+37. Capitola Beach | California | 9413450
+38. Captiva Island | Florida | 8725110
+39. Carlsbad Beach | California | 9410170
+40. Carmel Beach | California | 9413450
+41. Casey Key | Florida | 8726520
+42. Chatham | Massachusetts | 8447930
+43. Clearwater Beach | Florida | 8726520
+44. Cocoa Beach | Florida | 8721164
+45. Coney Island | New York | 8518750
+46. Corolla | North Carolina | 8651370
+47. Coronado Beach | California | 9410170
+48. Corpus Christi Beach | Texas | 8775870
+49. Crane Beach | Massachusetts | 8443970
+50. Crystal Beach | Florida | 8726520
+51. Dana Point | California | 9410660
+52. Daytona Beach | Florida | 8721164
+53. Deerfield Beach | Florida | 8722670
+54. Del Mar Beach | California | 9410170
+55. Dewey Beach | Delaware | 8557380
+56. Dockweiler Beach | California | 9410840
+57. Duck | North Carolina | 8651370
+58. Eastham | Massachusetts | 8447930
+59. El Matador Beach | California | 9410840
+60. El Segundo Beach | California | 9410840
+61. Encinitas | California | 9410170
+62. Englewood Beach | Florida | 8725110
+63. Fenwick Island | Delaware | 8557380
+64. Fire Island | New York | 8510560
+65. Flagler Beach | Florida | 8721164
+66. Florence Beach | Oregon | 9435380
+67. Folly Beach | South Carolina | 8665530
+68. Fort Lauderdale Beach | Florida | 8722670
+69. Fort Myers Beach | Florida | 8725110
+70. Freeport Beach | Texas | 8772447
+71. Frisco | North Carolina | 8654467
+72. Galveston Beach | Texas | 8771450
+73. Gold Beach | Oregon | 9431647
+74. Good Harbor Beach | Massachusetts | 8443970
+75. Grand Isle | Louisiana | 8761724
+76. Gulf Shores | Alabama | 8735180
+77. Half Moon Bay | California | 9414290
+78. Hallandale Beach | Florida | 8723214
+79. Hampton Beach | New Hampshire | 8423898
+80. Hanauma Bay | Hawaii | 1612340
+81. Harvey Cedars | New Jersey | 8534720 | Water Temp: 8534720
+82. Hatteras | North Carolina | 8654467
+83. Hermosa Beach | California | 9410840
+84. Hilton Head | South Carolina | 8670870
+85. Holgate | New Jersey | 8534720 | Water Temp: 8534720
+86. Hollywood Beach | Florida | 8723214
+87. Honeymoon Island | Florida | 8726520
+88. Huntington Beach | California | 9410660
+89. Imperial Beach | California | 9410170
+90. Indian Rocks Beach | Florida | 8726520
+91. Indian Shores | Florida | 8726520
+92. Islamorada | Florida | 8723970
+93. Jones Beach | New York | 8510560
+94. Kennebunk Beach | Maine | 8419317
+95. Key Biscayne | Florida | 8723214
+96. Key West Beach | Florida | 8724580
+97. Kiawah Island | South Carolina | 8665530
+98. Kill Devil Hills | North Carolina | 8651370
+99. Kitty Hawk | North Carolina | 8651370
+100. Laguna Beach | California | 9410660
+101. La Jolla Cove | California | 9410170
+102. Lanikai Beach | Hawaii | 1612340
+103. La Push Beach | Washington | 9442396
+104. Leo Carrillo Beach | California | 9410840
+105. Lido Key | Florida | 8726520
+106. Lincoln City | Oregon | 9435380
+107. Long Beach Island | New Jersey | 8534720 | Water Temp: 8534720
+108. Long Beach Peninsula | Washington | 9440910
+109. Longboat Key | Florida | 8726520
+110. Long Branch | New Jersey | 8531680
+111. Loveladies | New Jersey | 8534720 | Water Temp: 8534720
+112. Madeira Beach | Florida | 8726520
+113. Malibu Beach | California | 9410840
+114. Manasquan | New Jersey | 8531680
+115. Manhattan Beach | California | 9410840
+116. Manhattan State Beach | California | 9410840
+117. Manzanita Beach | Oregon | 9435380
+118. Marathon | Florida | 8723970
+119. Marco Island | Florida | 8725110
+120. Martha's Vineyard | Massachusetts | 8447930
+121. Matagorda Beach | Texas | 8773259
+122. Mendocino | California | 9416841
+123. Mission Beach | California | 9410170
+124. Montauk | New York | 8510560
+125. Monterey Bay | California | 9413450
+126. Mustang Island | Texas | 8775870
+127. Nags Head | North Carolina | 8652587
+128. Nantucket | Massachusetts | 8449130
+129. Naples Beach | Florida | 8725110
+130. Narragansett Beach | Rhode Island | 8452660
+131. New Smyrna Beach | Florida | 8721164
+132. Newport Beach | California | 9410660
+133. Newport Beach OR | Oregon | 9435380
+134. Newport Beach | Rhode Island | 8452660
+135. Ocean Beach | California | 9410170
+136. Ocean City | Maryland | 8570283
+137. Ocean City Boardwalk | New Jersey | 8534720
+138. Ocean Shores | Washington | 9441102
+139. Ogunquit Beach | Maine | 8419317
+140. Old Orchard Beach | Maine | 8418150
+141. Orange Beach | Alabama | 8735180
+142. Orleans | Massachusetts | 8447930
+143. Ormond Beach | Florida | 8721164
+144. Pacific Beach | California | 9410170
+145. Pacific City | Oregon | 9435380
+146. Padre Island | Texas | 8775870
+147. Panama City Beach | Florida | 8729108
+148. Pass-a-Grille Beach | Florida | 8726520
+149. Pismo Beach | California | 9412110
+150. Plum Island | Massachusetts | 8443970
+151. Point Dume | California | 9410840
+152. Point Pleasant | New Jersey | 8531680
+153. Pompano Beach | Florida | 8722670
+154. Port Arthur Beach | Texas | 8770822
+155. Port Lavaca Beach | Texas | 8773259
+156. Provincetown | Massachusetts | 8446121
+157. Redington Beach | Florida | 8726520
+158. Redington Shores | Florida | 8726520
+159. Redondo Beach | California | 9410840
+160. Rehoboth Beach | Delaware | 8557380
+161. Rialto Beach | Washington | 9442396
+162. Rockport Beach | Texas | 8774770
+163. Rodanthe | North Carolina | 8654467
+164. Rye Beach | New Hampshire | 8423898
+165. Salisbury Beach | Massachusetts | 8443970
+166. Salvo | North Carolina | 8654467
+167. San Clemente | California | 9410660
+168. Sanibel Island | Florida | 8725110
+169. Sea Isle City | New Jersey | 8536110
+170. Seaside Beach | Oregon | 9435380
+171. Seaside Heights | New Jersey | 8531680
+172. Ship Bottom | New Jersey | 8534720 | Water Temp: 8534720
+173. Siesta Key Beach | Florida | 8726520
+174. Solana Beach | California | 9410170
+175. South Beach | Florida | 8723214
+176. Southern Shores | North Carolina | 8651370
+177. South Padre Island | Texas | 8779770
+178. Spring Lake | New Jersey | 8531680
+179. St. Augustine Beach | Florida | 8720030
+180. Stinson Beach | California | 9414290
+181. Stone Harbor | New Jersey | 8536110
+182. St. Pete Beach | Florida | 8726520
+183. Sunny Isles Beach | Florida | 8723214
+184. Surf City | New Jersey | 8534720 | Water Temp: 8534720
+185. Surfside Beach | Texas | 8772447
+186. Tarpon Springs Beach | Florida | 8726520
+187. The Hamptons | New York | 8510560
+188. Torrey Pines | California | 9410170
+189. Treasure Island | Florida | 8726520
+190. Truro | Massachusetts | 8447930
+191. Tybee Island | Georgia | 8670870
+192. Venice Beach FL | Florida | 8726520
+193. Venice Beach | California | 9410840
+194. Virginia Beach | Virginia | 8638610
+195. Waves | North Carolina | 8654467
+196. Wellfleet | Massachusetts | 8447930
+197. Wells Beach | Maine | 8419317
+198. Wildwood | New Jersey | 8536110
+199. York Beach | Maine | 8419317
+200. Zuma Beach | California | 9410840
+
+---
+
+NOAA STATION USAGE SUMMARY
+==========================
+
+Most Commonly Used NOAA Stations:
+
+• Station 8726520 (West-Central Florida): 38 beaches
+  - Clearwater, St. Pete Beach, Siesta Key, Anna Maria Island, and many more Tampa Bay area beaches
+
+• Station 8534720 (Atlantic City, NJ area): 15 beaches
+  - Long Beach Island, Beach Haven, Barnegat Light, Ship Bottom, and surrounding NJ beaches
+
+• Station 8531680 (Sandy Hook, NJ area): 11 beaches
+  - Asbury Park, Belmar, Long Branch, Point Pleasant, and northern NJ shore beaches
+
+• Station 9410840 (Santa Monica, CA area): 15 beaches
+  - Santa Monica, Venice, Malibu, Manhattan Beach, Hermosa Beach, and Southern California beaches
+
+• Station 9410170 (San Diego, CA area): 14 beaches
+  - Coronado, La Jolla, Pacific Beach, Ocean Beach, and San Diego County beaches
+
+• Station 8654467 (Cape Hatteras, NC area): 10 beaches
+  - Outer Banks beaches including Buxton, Avon, Frisco, Rodanthe, Hatteras
+
+• Station 8651370 (Duck, NC area): 7 beaches
+  - Northern Outer Banks including Duck, Corolla, Kill Devil Hills, Kitty Hawk
+
+• Station 8723214 (Virginia Key, FL area): 8 beaches
+  - Miami Beach, South Beach, Key Biscayne, Hollywood Beach, and Miami-area beaches
+
+• Station 8725110 (Naples, FL area): 10 beaches
+  - Fort Myers Beach, Sanibel Island, Naples Beach, Marco Island, and Southwest Florida beaches
+
+• Station 8536110 (Cape May, NJ area): 6 beaches
+  - Cape May, Sea Isle City, Avalon, Stone Harbor, Wildwood
+
+• Station 8447930 (Chatham, MA area): 9 beaches
+  - Cape Cod beaches including Chatham, Eastham, Orleans, Wellfleet, Truro
+
+• Station 9435380 (Newport, OR area): 9 beaches
+  - Oregon coast beaches including Cannon Beach, Lincoln City, Seaside, Newport
+
+• Station 8443970 (Gloucester, MA area): 5 beaches
+  - Crane Beach, Good Harbor Beach, Plum Island, Salisbury Beach
+
+• Station 1612340 (Honolulu, HI area): 3 beaches
+  - Waikiki Beach, Hanauma Bay, Lanikai Beach
+
+---
+
+NOTES:
+• Some beaches have both a regular stationId and a separate waterTempStationId
+• Beaches in the same geographic area typically share the same NOAA station
+• 16 New Jersey beaches have dedicated water temperature monitoring stations
+• This data is used by the app to fetch tide predictions, water temperatures, and marine conditions
+
+---
+
+END OF REPORT
