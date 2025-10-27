@@ -2,12 +2,12 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import React, { useEffect, Component, ReactNode } from "react";
+import React, { useEffect, Component, ReactNode, useMemo } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BeachProvider } from "@/contexts/BeachContext";
 import { LocationProvider } from "@/contexts/LocationContext";
 import { View, Text, StyleSheet } from "react-native";
-import { trpc, trpcClient } from "@/lib/trpc";
+import { trpc, createTrpcClient } from "@/lib/trpc";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync().catch(() => {});
@@ -58,6 +58,22 @@ export default function RootLayout() {
   useEffect(() => {
     SplashScreen.hideAsync().catch(() => {});
   }, []);
+
+  const trpcClient = useMemo(() => createTrpcClient(), []);
+
+  if (!trpcClient) {
+    return (
+      <ErrorBoundary>
+        <View style={errorStyles.container}>
+          <Text style={errorStyles.title}>Configuration required</Text>
+          <Text style={errorStyles.message}>
+            Set the EXPO_PUBLIC_RORK_API_BASE_URL environment variable or define{' '}
+            expo.extra.rorkApiBaseUrl to connect to the Beach Report API.
+          </Text>
+        </View>
+      </ErrorBoundary>
+    );
+  }
 
   return (
     <ErrorBoundary>
