@@ -1,7 +1,7 @@
 import { useBeaches } from '@/contexts/BeachContext';
 import { ALL_BEACHES } from '@/constants/beaches';
 import { Beach } from '@/types/beach';
-import { Feather } from '@expo/vector-icons';
+import { Heart, Trash2 } from 'lucide-react-native';
 import React from 'react';
 import { router } from 'expo-router';
 import { 
@@ -37,7 +37,7 @@ export default function FavoritesScreen() {
         activeOpacity={0.7}
       >
         <Image 
-          source={typeof item.imageUrl === 'number' ? item.imageUrl : { uri: item.imageUrl as string }} 
+          source={{ uri: item.imageUrl }} 
           style={styles.beachThumbnail}
           resizeMode="cover"
         />
@@ -50,7 +50,7 @@ export default function FavoritesScreen() {
         style={styles.removeButton}
         onPress={() => handleRemoveFavorite(item.id)}
       >
-        <Feather name="trash-2" size={20} color="#EF4444" />
+        <Trash2 size={20} color="#EF4444" />
       </TouchableOpacity>
     </View>
   );
@@ -60,7 +60,7 @@ export default function FavoritesScreen() {
       <BeachHeader showBeachInfo={false} />
       {favoriteBeaches.length === 0 ? (
         <View style={styles.emptyContainer}>
-          <Feather name="heart" size={64} color="#CBD5E1" />
+          <Heart size={64} color="#CBD5E1" />
           <Text style={styles.emptyText}>No favorite beaches yet</Text>
           <Text style={styles.emptySubtext}>
             Tap the heart icon on any beach to add it to your favorites
