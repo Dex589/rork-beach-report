@@ -1,6 +1,6 @@
 import { useLocalSearchParams, Stack } from 'expo-router';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { AlertTriangle, Wind, Waves, Droplets, Sun, CheckCircle } from 'lucide-react-native';
+import { Feather } from '@expo/vector-icons';
 import { Alert } from '@/types/beach';
 
 export default function AlertsScreen() {
@@ -20,17 +20,17 @@ export default function AlertsScreen() {
     const iconProps = { size: 24, color: '#FFF' };
     switch (type) {
       case 'weather':
-        return <Sun {...iconProps} />;
+        return <Feather name="sun" {...iconProps} />;
       case 'surf':
-        return <Waves {...iconProps} />;
+        return <Feather name="activity" {...iconProps} />;
       case 'wind':
-        return <Wind {...iconProps} />;
+        return <Feather name="wind" {...iconProps} />;
       case 'water':
-        return <Droplets {...iconProps} />;
+        return <Feather name="droplet" {...iconProps} />;
       case 'marine':
-        return <AlertTriangle {...iconProps} />;
+        return <Feather name="alert-triangle" {...iconProps} />;
       default:
-        return <AlertTriangle {...iconProps} />;
+        return <Feather name="alert-triangle" {...iconProps} />;
     }
   };
 
@@ -112,9 +112,9 @@ export default function AlertsScreen() {
           <View style={[styles.flagStatusCard, { backgroundColor: getFlagColorHex(flagColor) }]}>
             <View style={styles.flagStatusHeader}>
               {flagColor === 'green' ? (
-                <CheckCircle size={32} color="#FFF" />
+                <Feather name="check-circle" size={32} color="#FFF" />
               ) : (
-                <AlertTriangle size={32} color="#FFF" />
+                <Feather name="alert-triangle" size={32} color="#FFF" />
               )}
               <View style={styles.flagStatusText}>
                 <Text style={styles.flagStatusTitle}>{getFlagLabel(flagColor)}</Text>

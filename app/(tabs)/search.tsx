@@ -2,7 +2,7 @@ import { useBeaches } from '@/contexts/BeachContext';
 import { useLocation } from '@/contexts/LocationContext';
 import { ALL_BEACHES, POPULAR_BEACHES } from '@/constants/beaches';
 import { Beach, BeachSearchResult } from '@/types/beach';
-import { MapPin, Search as SearchIcon, Plus, Check } from 'lucide-react-native';
+import { Feather } from '@expo/vector-icons';
 import React, { useState, useMemo } from 'react';
 import { router } from 'expo-router';
 import { 
@@ -76,7 +76,7 @@ export default function SearchScreen() {
           <Text style={styles.beachState}>{item.beach.state}</Text>
           {item.distance !== undefined && (
             <View style={styles.distanceRow}>
-              <MapPin size={14} color="#64748B" />
+              <Feather name="map-pin" size={14} color="#64748B" />
               <Text style={styles.distanceText}>{item.distance.toFixed(1)} miles away</Text>
             </View>
           )}
@@ -87,9 +87,9 @@ export default function SearchScreen() {
           disabled={inHome}
         >
           {inHome ? (
-            <Check size={20} color="#10B981" />
+            <Feather name="check" size={20} color="#10B981" />
           ) : (
-            <Plus size={20} color="#0EA5E9" />
+            <Feather name="plus" size={20} color="#0EA5E9" />
           )}
         </TouchableOpacity>
       </View>
@@ -101,7 +101,7 @@ export default function SearchScreen() {
       <BeachHeader showBeachInfo={false} />
       <View style={styles.searchContainer}>
         <View style={styles.searchInputContainer}>
-          <SearchIcon size={20} color="#94A3B8" />
+          <Feather name="search" size={20} color="#94A3B8" />
           <TextInput
             style={styles.searchInput}
             placeholder="Search beaches..."
@@ -141,7 +141,7 @@ export default function SearchScreen() {
             showsVerticalScrollIndicator={false}
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
-                <SearchIcon size={64} color="#CBD5E1" />
+                <Feather name="search" size={64} color="#CBD5E1" />
                 <Text style={styles.emptyText}>No beaches found</Text>
                 <Text style={styles.emptySubtext}>Try a different search term</Text>
               </View>

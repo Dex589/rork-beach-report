@@ -1,4 +1,4 @@
-import { Settings as SettingsIcon, MapPin, Info, Mail, Database } from 'lucide-react-native';
+import { Feather } from '@expo/vector-icons';
 import React from 'react';
 import { useRouter } from 'expo-router';
 import { 
@@ -27,7 +27,7 @@ export default function SettingsScreen() {
       <BeachHeader showBeachInfo={false} />
       <ScrollView style={styles.container}>
         <View style={styles.header}>
-        <SettingsIcon size={48} color="#0EA5E9" />
+        <Feather name="settings" size={48} color="#0EA5E9" />
         <Text style={styles.headerTitle}>Beach Report</Text>
         <Text style={styles.headerSubtitle}>Real-time beach conditions</Text>
       </View>
@@ -36,7 +36,7 @@ export default function SettingsScreen() {
         <Text style={styles.sectionTitle}>About</Text>
         <View style={styles.card}>
           <View style={styles.infoRow}>
-            <Info size={20} color="#64748B" />
+            <Feather name="info" size={20} color="#64748B" />
             <View style={styles.infoContent}>
               <Text style={styles.infoLabel}>Version</Text>
               <Text style={styles.infoValue}>1.0.0</Text>
@@ -61,7 +61,7 @@ export default function SettingsScreen() {
         <Text style={styles.sectionTitle}>Features</Text>
         <View style={styles.card}>
           <View style={styles.featureItem}>
-            <MapPin size={20} color="#0EA5E9" />
+            <Feather name="map-pin" size={20} color="#0EA5E9" />
             <Text style={styles.featureText}>GPS-based beach discovery</Text>
           </View>
           <View style={styles.featureItem}>
@@ -87,7 +87,7 @@ export default function SettingsScreen() {
         <Text style={styles.sectionTitle}>Developer Tools</Text>
         <TouchableOpacity style={styles.card} onPress={handleVerifyData}>
           <View style={styles.infoRow}>
-            <Database size={20} color="#0EA5E9" />
+            <Feather name="database" size={20} color="#0EA5E9" />
             <View style={styles.infoContent}>
               <Text style={styles.infoLabel}>Verify Beach Data</Text>
               <Text style={styles.infoValue}>Check all beach data sources</Text>
@@ -100,7 +100,7 @@ export default function SettingsScreen() {
         <Text style={styles.sectionTitle}>Support</Text>
         <TouchableOpacity style={styles.card} onPress={handleContactSupport}>
           <View style={styles.infoRow}>
-            <Mail size={20} color="#0EA5E9" />
+            <Feather name="mail" size={20} color="#0EA5E9" />
             <View style={styles.infoContent}>
               <Text style={styles.infoLabel}>Contact Support</Text>
               <Text style={styles.infoValue}>support@beach-report.com</Text>
