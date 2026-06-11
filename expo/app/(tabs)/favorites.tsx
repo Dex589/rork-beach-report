@@ -37,7 +37,7 @@ export default function FavoritesScreen() {
         activeOpacity={0.7}
       >
         <Image 
-          source={{ uri: item.imageUrl }} 
+          source={typeof item.imageUrl === 'number' ? item.imageUrl : { uri: item.imageUrl as string }} 
           style={styles.beachThumbnail}
           resizeMode="cover"
         />

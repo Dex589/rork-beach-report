@@ -1,9 +1,37 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Beach, BeachConditions, TideData, SurfData, WeatherData, WaterQuality, SunData, Alert } from '@/types/beach';
 
 const OPEN_METEO_API = 'https://api.open-meteo.com/v1/forecast';
 const OPEN_METEO_MARINE_API = 'https://marine-api.open-meteo.com/v1/marine';
 const SUNRISE_SUNSET_API = 'https://api.sunrise-sunset.org/json';
 const NOAA_TIDES_API = 'https://api.tidesandcurrents.noaa.gov/api/prod/datagetter';
+const CACHE_KEY_PREFIX = '@beach_conditions_cache:';
+
+/**
+ * Reads the last successfully fetched conditions for a beach from local storage.
+ * Used so the app can still show recent data when offline or when APIs fail.
+ */
+async function readCachedConditions(beachId: string): Promise<BeachConditions | null> {
+  try {
+    const raw = await AsyncStorage.getItem(`${CACHE_KEY_PREFIX}${beachId}`);
+    if (!raw) return null;
+    return JSON.parse(raw) as BeachConditions;
+  } catch (error) {
+    console.log('[BeachAPI] Failed to read cached conditions:', error);
+    return null;
+  }
+}
+
+async function writeCachedConditions(conditions: BeachConditions): Promise<void> {
+  try {
+    await AsyncStorage.setItem(
+      `${CACHE_KEY_PREFIX}${conditions.beach.id}`,
+      JSON.stringify(conditions),
+    );
+  } catch (error) {
+    console.log('[BeachAPI] Failed to cache conditions:', error);
+  }
+}
 
 export async function fetchBeachConditions(beach: Beach): Promise<BeachConditions> {
   try {
@@ -21,7 +49,7 @@ export async function fetchBeachConditions(beach: Beach): Promise<BeachCondition
     const alerts = generateAlerts(weatherData, surfData, waterQuality);
     const flagWarning = determineFlag(alerts);
 
-    return {
+    const conditions: BeachConditions = {
       beach,
       weather: weatherData,
       tides: tideData,
@@ -33,8 +61,16 @@ export async function fetchBeachConditions(beach: Beach): Promise<BeachCondition
       alerts,
       lastUpdated: new Date().toISOString(),
     };
+
+    await writeCachedConditions(conditions);
+    return conditions;
   } catch (error) {
     console.error('[BeachAPI] Error fetching beach conditions for', beach.name, ':', error);
+    const cached = await readCachedConditions(beach.id);
+    if (cached) {
+      console.log('[BeachAPI] Returning cached conditions for', beach.name, 'from', cached.lastUpdated);
+      return cached;
+    }
     throw error;
   }
 }

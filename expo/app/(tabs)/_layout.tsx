@@ -1,4 +1,3 @@
-// template
 import { Tabs } from "expo-router";
 import { Home, Search, Heart, Settings } from "lucide-react-native";
 import React from "react";
