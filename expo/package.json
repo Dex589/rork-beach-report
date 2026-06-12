@@ -88,8 +88,5 @@
     "webpack-cli": "^6.0.1",
     "@expo/ngrok": "^4.1.0"
   },
-  "resolutions": {
-    "@expo/prebuild-config": "latest"
-  },
   "private": true
 }
