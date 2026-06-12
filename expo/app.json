@@ -32,6 +32,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.beachreport.app",
+      "versionCode": 2,
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",
