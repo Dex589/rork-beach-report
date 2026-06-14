@@ -90,5 +90,8 @@
     "typescript": "^5.8.3",
     "webpack-cli": "^6.0.1"
   },
-  "private": true
+  "private": true,
+  "overrides": {
+    "expo-location": "19.0.8"
+  }
 }
