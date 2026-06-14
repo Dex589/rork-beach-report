@@ -1,5 +1,6 @@
 import { Settings as SettingsIcon, MapPin, Info, Mail, Database } from 'lucide-react-native';
 import React from 'react';
+import Constants from 'expo-constants';
 import { useRouter } from 'expo-router';
 import { 
   View, 
@@ -13,6 +14,7 @@ import BeachHeader from '@/components/BeachHeader';
 
 export default function SettingsScreen() {
   const router = useRouter();
+  const appVersion = Constants.expoConfig?.version ?? '1.0.0';
   
   const handleContactSupport = () => {
     Linking.openURL('mailto:support@beach-report.com');
@@ -39,7 +41,7 @@ export default function SettingsScreen() {
             <Info size={20} color="#64748B" />
             <View style={styles.infoContent}>
               <Text style={styles.infoLabel}>Version</Text>
-              <Text style={styles.infoValue}>1.0.0</Text>
+              <Text style={styles.infoValue}>{appVersion}</Text>
             </View>
           </View>
         </View>
