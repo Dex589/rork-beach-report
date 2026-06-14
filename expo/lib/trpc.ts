@@ -5,13 +5,23 @@ import superjson from "superjson";
 
 export const trpc = createTRPCReact<AppRouter>();
 
-const getBaseUrl = () => {
-  if (process.env.EXPO_PUBLIC_RORK_API_BASE_URL) {
-    return process.env.EXPO_PUBLIC_RORK_API_BASE_URL;
-  }
-
-  throw new Error(
-    "No base url found, please set EXPO_PUBLIC_RORK_API_BASE_URL"
+/**
+ * Resolves the backend base URL.
+ *
+ * IMPORTANT: this must never throw. It runs at module load (when `trpcClient`
+ * is created), which happens during the import of the root layout — before the
+ * React tree (and the ErrorBoundary) mounts. Throwing here crashes the whole JS
+ * bundle on startup, which on a production build closes the app instantly.
+ *
+ * In the Rork preview `EXPO_PUBLIC_RORK_API_BASE_URL` is always defined, but a
+ * standalone EAS/Play Store build only inlines env vars that are committed to a
+ * `.env` or declared in `eas.json`, so we fall back to a sane default.
+ */
+const getBaseUrl = (): string => {
+  return (
+    process.env.EXPO_PUBLIC_RORK_API_BASE_URL ??
+    process.env.EXPO_PUBLIC_RORK_FUNCTIONS_URL ??
+    "https://beach-report-backend.rork.app"
   );
 };
 
