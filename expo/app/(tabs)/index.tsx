@@ -2,7 +2,7 @@ import { useBeaches } from '@/contexts/BeachContext';
 import { fetchBeachConditions, getUVGuidance } from '@/services/beachApi';
 import { BeachConditions } from '@/types/beach';
 import { useQuery } from '@tanstack/react-query';
-import { router } from 'expo-router';
+import { router, useFocusEffect } from 'expo-router';
 import { 
   ChevronLeft, 
   ChevronRight, 
@@ -19,9 +19,10 @@ import {
   Clock,
   Umbrella,
   ArrowUp,
-  ArrowDown
+  ArrowDown,
+  X
 } from 'lucide-react-native';
-import React, { useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { 
   View, 
   Text, 
@@ -31,7 +32,8 @@ import {
   Image, 
   ActivityIndicator,
   Dimensions,
-  Linking
+  Linking,
+  Alert
 } from 'react-native';
 import BeachHeader from '@/components/BeachHeader';
 import AdBannerPlaceholder from '@/components/AdBannerPlaceholder';
@@ -39,10 +41,23 @@ import AdBannerPlaceholder from '@/components/AdBannerPlaceholder';
 const { width } = Dimensions.get('window');
 
 export default function HomeScreen() {
-  const { homeBeaches, selectedBeachId, toggleFavorite, isFavorite, isLoading: beachesLoading, clearSelectedBeach } = useBeaches();
+  const { homeBeaches, selectedBeachId, toggleFavorite, isFavorite, isLoading: beachesLoading, clearSelectedBeach, removeBeachFromHome } = useBeaches();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollViewRef = useRef<ScrollView>(null);
 
   const currentBeach = homeBeaches[currentIndex];
+
+  useFocusEffect(
+    useCallback(() => {
+      scrollViewRef.current?.scrollTo({ y: 0, animated: false });
+    }, [])
+  );
+
+  React.useEffect(() => {
+    if (homeBeaches.length > 0 && currentIndex > homeBeaches.length - 1) {
+      setCurrentIndex(homeBeaches.length - 1);
+    }
+  }, [homeBeaches.length, currentIndex]);
 
   React.useEffect(() => {
     if (selectedBeachId && homeBeaches.length > 0) {
@@ -82,6 +97,27 @@ export default function HomeScreen() {
     if (currentBeach) {
       toggleFavorite(currentBeach.id);
     }
+  };
+
+  const handleRemove = () => {
+    if (!currentBeach || isFavorite(currentBeach.id)) {
+      return;
+    }
+    const beachToRemove = currentBeach;
+    Alert.alert(
+      'Remove Beach',
+      `Remove ${beachToRemove.name} from your home page?`,
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Remove',
+          style: 'destructive',
+          onPress: () => {
+            removeBeachFromHome(beachToRemove.id);
+          },
+        },
+      ]
+    );
   };
 
   const openCamera = () => {
@@ -136,13 +172,18 @@ export default function HomeScreen() {
         onFavorite={handleFavorite}
         isFavorite={isFavorite(currentBeach.id)}
       />
-      <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+      <ScrollView ref={scrollViewRef} style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.imageContainer}>
           <Image 
             source={typeof currentBeach.imageUrl === 'number' ? currentBeach.imageUrl : { uri: currentBeach.imageUrl as string }} 
             style={styles.beachImage}
             resizeMode="cover"
           />
+          {!isFavorite(currentBeach.id) && (
+            <TouchableOpacity style={styles.removeButton} onPress={handleRemove} activeOpacity={0.8}>
+              <X size={20} color="#FFF" strokeWidth={2.5} />
+            </TouchableOpacity>
+          )}
           <View style={styles.imageOverlay}>
             {homeBeaches.length > 1 && (
               <View style={styles.navigationRow}>
@@ -457,6 +498,18 @@ const styles = StyleSheet.create({
   beachImage: {
     width: '100%',
     height: '100%',
+  },
+  removeButton: {
+    position: 'absolute',
+    top: 12,
+    right: 12,
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: 'rgba(0,0,0,0.45)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 10,
   },
   imageOverlay: {
     position: 'absolute',
