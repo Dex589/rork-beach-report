@@ -2,9 +2,20 @@ import createContextHook from '@nkzw/create-context-hook';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect, useState } from 'react';
 import { Beach } from '@/types/beach';
-import { POPULAR_BEACHES } from '@/constants/beaches';
+import { POPULAR_BEACHES, ALL_BEACHES } from '@/constants/beaches';
 
 const MAX_HOME_BEACHES = 5;
+
+/**
+ * Returns the freshest version of a stored beach by matching its id against the
+ * current beach data, so fields like camera links stay up to date even if the
+ * beach was saved to storage before those fields existed. Falls back to the
+ * stored object if no match is found.
+ */
+const rehydrateBeach = (beach: Beach): Beach => {
+  const fresh = ALL_BEACHES.find(b => b.id === beach.id);
+  return fresh ? { ...beach, ...fresh } : beach;
+};
 const STORAGE_KEY_FAVORITES = '@beach_report_favorites';
 const STORAGE_KEY_HOME_BEACHES = '@beach_report_home_beaches';
 
@@ -65,7 +76,7 @@ export const [BeachProvider, useBeaches] = createContextHook(() => {
         try {
           const parsedBeaches = JSON.parse(storedHomeBeaches);
           if (Array.isArray(parsedBeaches) && parsedBeaches.length > 0) {
-            setHomeBeaches(parsedBeaches);
+            setHomeBeaches(parsedBeaches.map(rehydrateBeach));
             console.log('[BeachContext] Set home beaches:', parsedBeaches.length);
           } else {
             console.log('[BeachContext] Invalid stored beaches, using default');
