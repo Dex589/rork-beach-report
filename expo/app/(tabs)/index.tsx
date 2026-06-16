@@ -231,6 +231,18 @@ export default function HomeScreen() {
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Current Conditions</Text>
+              <View style={styles.realFeelBanner}>
+                <View style={styles.realFeelIcon}>
+                  <Thermometer size={28} color="#FFF" />
+                </View>
+                <View style={styles.realFeelTextContainer}>
+                  <Text style={styles.realFeelLabel}>Real Feel</Text>
+                  <Text style={styles.realFeelSubtext}>Feels like with humidity</Text>
+                </View>
+                <Text style={styles.realFeelValue}>
+                  {getRealFeel(conditions.weather.temperature, conditions.weather.humidity)}°F
+                </Text>
+              </View>
               <View style={styles.conditionsGrid}>
                 <View style={styles.conditionCard}>
                   <Thermometer size={24} color="#0EA5E9" />
@@ -431,6 +443,30 @@ export default function HomeScreen() {
   );
 }
 
+function getRealFeel(temperatureF: number, humidity: number): number {
+  if (temperatureF < 80) {
+    return Math.round(temperatureF);
+  }
+  const t = temperatureF;
+  const r = humidity;
+  let hi =
+    -42.379 +
+    2.04901523 * t +
+    10.14333127 * r -
+    0.22475541 * t * r -
+    0.00683783 * t * t -
+    0.05481717 * r * r +
+    0.00122874 * t * t * r +
+    0.00085282 * t * r * r -
+    0.00000199 * t * t * r * r;
+  if (r < 13 && t >= 80 && t <= 112) {
+    hi -= ((13 - r) / 4) * Math.sqrt((17 - Math.abs(t - 95)) / 17);
+  } else if (r > 85 && t >= 80 && t <= 87) {
+    hi += ((r - 85) / 10) * ((87 - t) / 5);
+  }
+  return Math.round(hi);
+}
+
 function getFlagColor(flag: string): string {
   switch (flag) {
     case 'green': return '#10B981';
@@ -586,14 +622,53 @@ const styles = StyleSheet.create({
     color: '#1E293B',
     marginBottom: 12,
   },
+  realFeelBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#0EA5E9',
+    borderRadius: 16,
+    padding: 16,
+    marginBottom: 12,
+    gap: 14,
+    shadowColor: '#0EA5E9',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  realFeelIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  realFeelTextContainer: {
+    flex: 1,
+  },
+  realFeelLabel: {
+    fontSize: 18,
+    fontWeight: '700' as const,
+    color: '#FFF',
+  },
+  realFeelSubtext: {
+    fontSize: 13,
+    color: 'rgba(255,255,255,0.85)',
+    marginTop: 2,
+  },
+  realFeelValue: {
+    fontSize: 40,
+    fontWeight: '800' as const,
+    color: '#FFF',
+  },
   conditionsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 12,
   },
   conditionCard: {
-    flex: 1,
-    minWidth: (width - 48) / 2,
+    width: (width - 44) / 2,
     backgroundColor: '#FFF',
     padding: 16,
     borderRadius: 12,
