@@ -403,10 +403,22 @@ export default function HomeScreen() {
             <AdBannerPlaceholder size="medium" />
 
             {currentBeach.cameraUrl && (
-              <TouchableOpacity style={styles.cameraButton} onPress={openCamera}>
-                <Camera size={20} color="#FFF" />
-                <Text style={styles.cameraButtonText}>View Live Camera</Text>
-              </TouchableOpacity>
+              <View>
+                <TouchableOpacity style={styles.cameraButton} onPress={openCamera}>
+                  <Camera size={20} color="#FFF" />
+                  <Text style={styles.cameraButtonText}>View Live Camera</Text>
+                  {currentBeach.cameraType === 'nearby' && (
+                    <View style={styles.nearbyBadge}>
+                      <Text style={styles.nearbyBadgeText}>Nearby</Text>
+                    </View>
+                  )}
+                </TouchableOpacity>
+                {currentBeach.cameraType === 'nearby' && (
+                  <Text style={styles.nearbyCaption}>
+                    Nearby camera — shows the closest live view, not this exact beach.
+                  </Text>
+                )}
+              </View>
             )}
 
             <Text style={styles.lastUpdated}>
@@ -823,6 +835,27 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600' as const,
     color: '#FFF',
+  },
+  nearbyBadge: {
+    backgroundColor: 'rgba(255, 255, 255, 0.25)',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 10,
+    marginLeft: 2,
+  },
+  nearbyBadgeText: {
+    fontSize: 11,
+    fontWeight: '700' as const,
+    color: '#FFF',
+    letterSpacing: 0.3,
+  },
+  nearbyCaption: {
+    fontSize: 12,
+    color: '#64748B',
+    textAlign: 'center',
+    marginTop: 6,
+    paddingHorizontal: 12,
+    lineHeight: 16,
   },
   lastUpdated: {
     fontSize: 12,

@@ -8,6 +8,7 @@ export interface Beach {
   waterTempStationId?: string;
   imageUrl?: string | number;
   cameraUrl?: string;
+  cameraType?: 'direct' | 'nearby';
 }
 
 export interface WeatherData {
