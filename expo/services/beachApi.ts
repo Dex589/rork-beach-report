@@ -108,6 +108,31 @@ async function fetchWeatherData(lat: number, lon: number): Promise<WeatherData> 
   }
 }
 
+function formatTime(d: Date): string {
+  return d.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+  });
+}
+
+/**
+ * Calculates the evening golden hour window (warm, low-angle light for photos).
+ * The window ends at sunset and starts earlier; its length grows with latitude
+ * because the sun sets at a shallower angle, so golden light lingers longer.
+ */
+function calculateGoldenHour(sunset: Date, lat: number): string {
+  const absLat = Math.min(Math.abs(lat), 66);
+  const durationMinutes = Math.round(35 + (absLat / 66) * 45);
+  const start = new Date(sunset.getTime() - durationMinutes * 60 * 1000);
+  const startStr = formatTime(start);
+  const endStr = formatTime(sunset);
+  const startPeriod = startStr.slice(-2);
+  const endPeriod = endStr.slice(-2);
+  const startLabel = startPeriod === endPeriod ? startStr.slice(0, -3) : startStr;
+  return `${startLabel} - ${endStr}`;
+}
+
 async function fetchSunData(lat: number, lon: number): Promise<SunData> {
   try {
     const url = `${SUNRISE_SUNSET_API}?lat=${lat}&lng=${lon}&formatted=0`;
@@ -116,24 +141,21 @@ async function fetchSunData(lat: number, lon: number): Promise<SunData> {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
+    const sunsetDate = new Date(data.results.sunset);
 
     return {
-      sunrise: new Date(data.results.sunrise).toLocaleTimeString('en-US', { 
-        hour: 'numeric', 
-        minute: '2-digit',
-        hour12: true 
-      }),
-      sunset: new Date(data.results.sunset).toLocaleTimeString('en-US', { 
-        hour: 'numeric', 
-        minute: '2-digit',
-        hour12: true 
-      }),
+      sunrise: formatTime(new Date(data.results.sunrise)),
+      sunset: formatTime(sunsetDate),
+      goldenHour: calculateGoldenHour(sunsetDate, lat),
     };
   } catch (error) {
     console.log('Using fallback sun data due to API error');
+    const fallbackSunset = new Date();
+    fallbackSunset.setHours(19, 45, 0, 0);
     return {
       sunrise: '6:30 AM',
       sunset: '7:45 PM',
+      goldenHour: calculateGoldenHour(fallbackSunset, lat),
     };
   }
 }

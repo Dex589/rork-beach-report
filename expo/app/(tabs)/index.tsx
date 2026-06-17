@@ -338,6 +338,11 @@ export default function HomeScreen() {
                   <Text style={styles.sunTimeLabel}>Sunset</Text>
                   <Text style={styles.sunTimeValue}>{conditions.sunData.sunset}</Text>
                 </View>
+                <View style={styles.sunTimeCard}>
+                  <Sun size={24} color="#D97706" />
+                  <Text style={styles.sunTimeLabel}>Golden Hour</Text>
+                  <Text style={styles.sunTimeValueSmall}>{conditions.sunData.goldenHour}</Text>
+                </View>
               </View>
             </View>
 
@@ -797,6 +802,13 @@ const styles = StyleSheet.create({
     fontWeight: '700' as const,
     color: '#1E293B',
     marginTop: 4,
+  },
+  sunTimeValueSmall: {
+    fontSize: 13,
+    fontWeight: '700' as const,
+    color: '#1E293B',
+    marginTop: 4,
+    textAlign: 'center' as const,
   },
   currentTideCard: {
     backgroundColor: '#FFF',

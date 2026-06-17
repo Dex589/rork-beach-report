@@ -40,6 +40,7 @@ export interface WaterQuality {
 export interface SunData {
   sunrise: string;
   sunset: string;
+  goldenHour: string;
 }
 
 export interface Alert {
