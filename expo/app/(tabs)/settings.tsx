@@ -1,6 +1,5 @@
 import { Settings as SettingsIcon, MapPin, Info, Mail, Database } from 'lucide-react-native';
 import React from 'react';
-import Constants from 'expo-constants';
 import { useRouter } from 'expo-router';
 import appConfig from '../../app.json';
 import { 
@@ -15,7 +14,7 @@ import BeachHeader from '@/components/BeachHeader';
 
 export default function SettingsScreen() {
   const router = useRouter();
-  const appVersion = Constants.expoConfig?.version ?? appConfig.expo.version;
+  const appVersion = appConfig.expo.version;
   
   const handleContactSupport = () => {
     Linking.openURL('mailto:support@beach-report.com');
