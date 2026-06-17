@@ -328,20 +328,24 @@ export default function HomeScreen() {
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Sun Times</Text>
               <View style={styles.sunTimesContainer}>
-                <View style={styles.sunTimeCard}>
-                  <Sunrise size={24} color="#F59E0B" />
-                  <Text style={styles.sunTimeLabel}>Sunrise</Text>
-                  <Text style={styles.sunTimeValue}>{conditions.sunData.sunrise}</Text>
+                <View style={styles.sunTimesRow}>
+                  <View style={styles.sunTimeCard}>
+                    <Sunrise size={24} color="#F59E0B" />
+                    <Text style={styles.sunTimeLabel}>Sunrise</Text>
+                    <Text style={styles.sunTimeValue}>{conditions.sunData.sunrise}</Text>
+                  </View>
+                  <View style={styles.sunTimeCard}>
+                    <Sunset size={24} color="#F97316" />
+                    <Text style={styles.sunTimeLabel}>Sunset</Text>
+                    <Text style={styles.sunTimeValue}>{conditions.sunData.sunset}</Text>
+                  </View>
                 </View>
-                <View style={styles.sunTimeCard}>
-                  <Sunset size={24} color="#F97316" />
-                  <Text style={styles.sunTimeLabel}>Sunset</Text>
-                  <Text style={styles.sunTimeValue}>{conditions.sunData.sunset}</Text>
-                </View>
-                <View style={styles.sunTimeCard}>
+                <View style={styles.goldenHourCard}>
                   <Sun size={24} color="#D97706" />
-                  <Text style={styles.sunTimeLabel}>Golden Hour</Text>
-                  <Text style={styles.sunTimeValueSmall}>{conditions.sunData.goldenHour}</Text>
+                  <View style={styles.goldenHourTextWrap}>
+                    <Text style={styles.sunTimeLabel}>Golden Hour</Text>
+                    <Text style={styles.sunTimeValue}>{conditions.sunData.goldenHour}</Text>
+                  </View>
                 </View>
               </View>
             </View>
@@ -777,8 +781,28 @@ const styles = StyleSheet.create({
     color: '#64748B',
   },
   sunTimesContainer: {
+    gap: 12,
+  },
+  sunTimesRow: {
     flexDirection: 'row',
     gap: 12,
+  },
+  goldenHourCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 12,
+    backgroundColor: '#FFF',
+    padding: 16,
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  goldenHourTextWrap: {
+    alignItems: 'center',
   },
   sunTimeCard: {
     flex: 1,
