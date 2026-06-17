@@ -3,7 +3,7 @@
     "name": "Beach Report",
     "slug": "beach-report-nativley",
     "owner": "dex589",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -32,7 +32,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.beachreport.app",
-      "versionCode": 7,
+      "versionCode": 8,
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",
