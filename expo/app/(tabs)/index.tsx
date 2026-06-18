@@ -33,17 +33,23 @@ import {
   ActivityIndicator,
   Dimensions,
   Linking,
-  Alert
+  Alert,
+  Platform
 } from 'react-native';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming, runOnJS } from 'react-native-reanimated';
+import * as Haptics from 'expo-haptics';
 import BeachHeader from '@/components/BeachHeader';
 import AdBannerPlaceholder from '@/components/AdBannerPlaceholder';
 
 const { width } = Dimensions.get('window');
+const SWIPE_THRESHOLD = 60;
 
 export default function HomeScreen() {
   const { homeBeaches, selectedBeachId, toggleFavorite, isFavorite, isLoading: beachesLoading, clearSelectedBeach, removeBeachFromHome } = useBeaches();
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollViewRef = useRef<ScrollView>(null);
+  const translateX = useSharedValue<number>(0);
 
   const currentBeach = homeBeaches[currentIndex];
 
@@ -85,13 +91,52 @@ export default function HomeScreen() {
     console.error('[HomeScreen] Error loading conditions:', conditionsError);
   }
 
-  const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : homeBeaches.length - 1));
-  };
+  const changeBeach = useCallback((direction: 'next' | 'prev') => {
+    if (homeBeaches.length <= 1) {
+      return;
+    }
+    setCurrentIndex((prev) => {
+      if (direction === 'next') {
+        return prev < homeBeaches.length - 1 ? prev + 1 : 0;
+      }
+      return prev > 0 ? prev - 1 : homeBeaches.length - 1;
+    });
+    if (Platform.OS !== 'web') {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
+    }
+    scrollViewRef.current?.scrollTo({ y: 0, animated: false });
+  }, [homeBeaches.length]);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev < homeBeaches.length - 1 ? prev + 1 : 0));
-  };
+  const handlePrevious = () => changeBeach('prev');
+
+  const handleNext = () => changeBeach('next');
+
+  const panGesture = Gesture.Pan()
+    .activeOffsetX([-20, 20])
+    .failOffsetY([-15, 15])
+    .onUpdate((e) => {
+      translateX.value = e.translationX;
+    })
+    .onEnd((e) => {
+      const shouldChange = Math.abs(e.translationX) > SWIPE_THRESHOLD && homeBeaches.length > 1;
+      if (shouldChange) {
+        const direction: 'next' | 'prev' = e.translationX < 0 ? 'next' : 'prev';
+        const exitTo = e.translationX < 0 ? -width : width;
+        translateX.value = withTiming(exitTo, { duration: 150 }, (finished) => {
+          if (finished) {
+            runOnJS(changeBeach)(direction);
+            translateX.value = -exitTo;
+            translateX.value = withTiming(0, { duration: 220 });
+          }
+        });
+      } else {
+        translateX.value = withTiming(0, { duration: 200 });
+      }
+    });
+
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ translateX: translateX.value }],
+  }));
 
   const handleFavorite = () => {
     if (currentBeach) {
@@ -172,6 +217,8 @@ export default function HomeScreen() {
         onFavorite={handleFavorite}
         isFavorite={isFavorite(currentBeach.id)}
       />
+      <GestureDetector gesture={panGesture}>
+        <Animated.View style={[styles.scrollView, animatedStyle]}>
       <ScrollView ref={scrollViewRef} style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.imageContainer}>
           <Image 
@@ -448,6 +495,8 @@ export default function HomeScreen() {
           </View>
         ) : null}
       </ScrollView>
+        </Animated.View>
+      </GestureDetector>
     </View>
   );
 }
