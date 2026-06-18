@@ -20,10 +20,7 @@
       "infoPlist": {
         "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to use your location.",
         "NSLocationAlwaysUsageDescription": "Allow $(PRODUCT_NAME) to use your location.",
-        "NSLocationWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to use your location.",
-        "UIBackgroundModes": [
-          "location"
-        ]
+        "NSLocationWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to use your location."
       }
     },
     "android": {
@@ -35,10 +32,7 @@
       "versionCode": 8,
       "permissions": [
         "ACCESS_COARSE_LOCATION",
-        "ACCESS_FINE_LOCATION",
-        "FOREGROUND_SERVICE",
-        "FOREGROUND_SERVICE_LOCATION",
-        "ACCESS_BACKGROUND_LOCATION"
+        "ACCESS_FINE_LOCATION"
       ]
     },
     "web": {
@@ -54,10 +48,7 @@
       [
         "expo-location",
         {
-          "isAndroidForegroundServiceEnabled": true,
-          "isAndroidBackgroundLocationEnabled": true,
-          "isIosBackgroundLocationEnabled": true,
-          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+          "locationWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
       ],
       "@react-native-community/datetimepicker"
