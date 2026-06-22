@@ -677,6 +677,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.2026,
     longitude: -74.0121,
     stationId: '8531680',
+    waterTempStationId: '8534720',
     imageUrl: getBeachImageUrl('bradley-beach'),
   },
   {
