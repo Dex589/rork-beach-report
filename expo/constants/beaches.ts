@@ -437,6 +437,7 @@ const POPULAR_BEACHES_BASE: Beach[] = [
     latitude: 25.7907,
     longitude: -80.1300,
     stationId: '8723214',
+    waterTempStationId: '8723214',
     imageUrl: getBeachImageUrl('miami-beach'),
   },
   {
@@ -446,6 +447,7 @@ const POPULAR_BEACHES_BASE: Beach[] = [
     latitude: 34.0195,
     longitude: -118.4912,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('santa-monica'),
   },
   {
@@ -455,6 +457,7 @@ const POPULAR_BEACHES_BASE: Beach[] = [
     latitude: 21.2793,
     longitude: -157.8293,
     stationId: '1612340',
+    waterTempStationId: '1612340',
     imageUrl: getBeachImageUrl('waikiki'),
   },
   {
@@ -464,6 +467,7 @@ const POPULAR_BEACHES_BASE: Beach[] = [
     latitude: 33.6891,
     longitude: -78.8867,
     stationId: '8661070',
+    waterTempStationId: '8661070',
     imageUrl: getBeachImageUrl('myrtle-beach'),
   },
   {
@@ -473,6 +477,7 @@ const POPULAR_BEACHES_BASE: Beach[] = [
     latitude: 35.5585,
     longitude: -75.4665,
     stationId: '8652587',
+    waterTempStationId: '8652587',
     imageUrl: getBeachImageUrl('outer-banks'),
   },
 ];
@@ -486,6 +491,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 30.6719,
     longitude: -81.4606,
     stationId: '8720030',
+    waterTempStationId: '8720218',
     imageUrl: getBeachImageUrl('amelia-island'),
   },
   {
@@ -495,6 +501,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.5314,
     longitude: -82.7326,
     stationId: '8726520',
+    waterTempStationId: '8726384',
     imageUrl: getBeachImageUrl('anna-maria-island'),
   },
   {
@@ -504,6 +511,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.2204,
     longitude: -74.0121,
     stationId: '8531680',
+    waterTempStationId: '8531680',
     imageUrl: getBeachImageUrl('asbury-park'),
   },
   {
@@ -513,6 +521,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 38.2211,
     longitude: -75.1544,
     stationId: '8570283',
+    waterTempStationId: '8570283',
     imageUrl: getBeachImageUrl('assateague-island'),
   },
   {
@@ -522,6 +531,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 39.3643,
     longitude: -74.4229,
     stationId: '8534720',
+    waterTempStationId: '8534720',
     imageUrl: getBeachImageUrl('atlantic-city'),
   },
   {
@@ -531,6 +541,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 39.1007,
     longitude: -74.7196,
     stationId: '8536110',
+    waterTempStationId: '8536110',
     imageUrl: getBeachImageUrl('avalon-beach'),
   },
   {
@@ -540,6 +551,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.3532,
     longitude: -75.5063,
     stationId: '8654467',
+    waterTempStationId: '8654467',
     imageUrl: getBeachImageUrl('avon-nc'),
   },
   {
@@ -549,6 +561,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 25.8923,
     longitude: -80.1234,
     stationId: '8723214',
+    waterTempStationId: '8723214',
     imageUrl: getBeachImageUrl('bal-harbour'),
   },
   {
@@ -558,6 +571,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 43.1190,
     longitude: -124.4084,
     stationId: '9431647',
+    waterTempStationId: '9431647',
     imageUrl: getBeachImageUrl('bandon-beach'),
   },
   {
@@ -567,6 +581,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 44.3876,
     longitude: -68.2039,
     stationId: '8413320',
+    waterTempStationId: '8413320',
     imageUrl: getBeachImageUrl('bar-harbor'),
   },
   {
@@ -596,6 +611,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.9192,
     longitude: -82.8376,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('belleair-beach'),
   },
   {
@@ -605,6 +621,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.1785,
     longitude: -74.0218,
     stationId: '8531680',
+    waterTempStationId: '8531680',
     imageUrl: getBeachImageUrl('belmar'),
   },
   {
@@ -614,6 +631,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 38.5393,
     longitude: -75.0552,
     stationId: '8557380',
+    waterTempStationId: '8570283',
     imageUrl: getBeachImageUrl('bethany-beach'),
   },
   {
@@ -623,6 +641,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 24.6714,
     longitude: -81.3534,
     stationId: '8724580',
+    waterTempStationId: '8723970',
     imageUrl: getBeachImageUrl('big-pine-key'),
   },
   {
@@ -632,6 +651,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 30.3960,
     longitude: -88.8853,
     stationId: '8747437',
+    waterTempStationId: '8741533',
     imageUrl: getBeachImageUrl('biloxi-beach'),
   },
   {
@@ -641,6 +661,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.1681,
     longitude: -71.5800,
     stationId: '8452660',
+    waterTempStationId: '8510560',
     imageUrl: getBeachImageUrl('block-island'),
   },
   {
@@ -650,6 +671,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.7273,
     longitude: -82.2626,
     stationId: '8725110',
+    waterTempStationId: '8725520',
     imageUrl: getBeachImageUrl('boca-grande'),
   },
   {
@@ -659,6 +681,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 29.4558,
     longitude: -94.6827,
     stationId: '8771450',
+    waterTempStationId: '8771341',
     imageUrl: getBeachImageUrl('bolivar-peninsula'),
   },
   {
@@ -668,6 +691,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.3398,
     longitude: -81.8773,
     stationId: '8725110',
+    waterTempStationId: '8725520',
     imageUrl: getBeachImageUrl('bonita-springs'),
   },
   {
@@ -697,6 +721,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 42.0526,
     longitude: -124.2840,
     stationId: '9431647',
+    waterTempStationId: '9419750',
     imageUrl: getBeachImageUrl('brookings-beach'),
   },
   {
@@ -706,6 +731,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 25.9017,
     longitude: -97.4975,
     stationId: '8779770',
+    waterTempStationId: '8779770',
     imageUrl: getBeachImageUrl('brownsville-beach'),
   },
   {
@@ -715,6 +741,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.2693,
     longitude: -75.5352,
     stationId: '8654467',
+    waterTempStationId: '8654467',
     imageUrl: getBeachImageUrl('buxton'),
   },
   {
@@ -724,6 +751,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.0253,
     longitude: -82.8176,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('caladesi-island'),
   },
   {
@@ -733,6 +761,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 45.8918,
     longitude: -123.9615,
     stationId: '9435380',
+    waterTempStationId: '9440422',
     imageUrl: getBeachImageUrl('cannon-beach'),
   },
   {
@@ -742,6 +771,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.9270,
     longitude: -70.0461,
     stationId: '8447930',
+    waterTempStationId: '8447930',
     imageUrl: getBeachImageUrl('cape-cod'),
   },
   {
@@ -751,6 +781,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.2226,
     longitude: -75.5291,
     stationId: '8654467',
+    waterTempStationId: '8654467',
     imageUrl: getBeachImageUrl('cape-hatteras'),
   },
   {
@@ -760,6 +791,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 38.9351,
     longitude: -74.9060,
     stationId: '8536110',
+    waterTempStationId: '8536110',
     imageUrl: getBeachImageUrl('cape-may'),
   },
   {
@@ -769,6 +801,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 36.9741,
     longitude: -121.9535,
     stationId: '9413450',
+    waterTempStationId: '9413450',
     imageUrl: getBeachImageUrl('capitola-beach'),
   },
   {
@@ -778,6 +811,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.5312,
     longitude: -82.1926,
     stationId: '8725110',
+    waterTempStationId: '8725520',
     imageUrl: getBeachImageUrl('captiva-island'),
   },
   {
@@ -787,6 +821,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.1581,
     longitude: -117.3506,
     stationId: '9410170',
+    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('carlsbad-beach'),
   },
   {
@@ -796,6 +831,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 36.5553,
     longitude: -121.9233,
     stationId: '9413450',
+    waterTempStationId: '9413450',
     imageUrl: getBeachImageUrl('carmel-beach'),
   },
   {
@@ -805,6 +841,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.1253,
     longitude: -82.5376,
     stationId: '8726520',
+    waterTempStationId: '8726384',
     imageUrl: getBeachImageUrl('casey-key'),
   },
   {
@@ -814,6 +851,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.6821,
     longitude: -69.9597,
     stationId: '8447930',
+    waterTempStationId: '8449130',
     imageUrl: getBeachImageUrl('chatham'),
   },
   {
@@ -823,6 +861,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.9659,
     longitude: -82.8001,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('clearwater'),
   },
   {
@@ -832,6 +871,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.3200,
     longitude: -80.6076,
     stationId: '8721164',
+    waterTempStationId: '8721604',
     imageUrl: getBeachImageUrl('cocoa-beach'),
   },
   {
@@ -841,6 +881,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.5755,
     longitude: -73.9707,
     stationId: '8518750',
+    waterTempStationId: '8531680',
     imageUrl: getBeachImageUrl('coney-island'),
   },
   {
@@ -850,6 +891,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 36.3760,
     longitude: -75.8269,
     stationId: '8651370',
+    waterTempStationId: '8651370',
     imageUrl: getBeachImageUrl('corolla'),
   },
   {
@@ -859,6 +901,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.6859,
     longitude: -117.1831,
     stationId: '9410170',
+    waterTempStationId: '9410170',
     imageUrl: getBeachImageUrl('coronado'),
   },
   {
@@ -868,6 +911,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.8006,
     longitude: -97.3964,
     stationId: '8775870',
+    waterTempStationId: '8775296',
     imageUrl: getBeachImageUrl('corpus-christi'),
   },
   {
@@ -877,6 +921,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 42.6834,
     longitude: -70.7698,
     stationId: '8443970',
+    waterTempStationId: '8419870',
     imageUrl: getBeachImageUrl('crane-beach'),
   },
   {
@@ -886,6 +931,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.0856,
     longitude: -82.7859,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('crystal-beach-fl'),
   },
   {
@@ -895,6 +941,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.4673,
     longitude: -117.6981,
     stationId: '9410660',
+    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('dana-point'),
   },
   {
@@ -904,6 +951,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 29.2108,
     longitude: -81.0228,
     stationId: '8721164',
+    waterTempStationId: '8721604',
     imageUrl: getBeachImageUrl('daytona'),
   },
   {
@@ -913,6 +961,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.3184,
     longitude: -80.0998,
     stationId: '8722670',
+    waterTempStationId: '8722956',
     imageUrl: getBeachImageUrl('deerfield-beach'),
   },
   {
@@ -922,6 +971,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.9595,
     longitude: -117.2653,
     stationId: '9410170',
+    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('del-mar'),
   },
   {
@@ -931,6 +981,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 38.6929,
     longitude: -75.0732,
     stationId: '8557380',
+    waterTempStationId: '8557380',
     imageUrl: getBeachImageUrl('dewey-beach'),
   },
   {
@@ -940,6 +991,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.9192,
     longitude: -118.4365,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('dockweiler-beach'),
   },
   {
@@ -949,6 +1001,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 36.1593,
     longitude: -75.7460,
     stationId: '8651370',
+    waterTempStationId: '8651370',
     imageUrl: getBeachImageUrl('duck'),
   },
   {
@@ -958,6 +1011,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.8301,
     longitude: -69.9745,
     stationId: '8447930',
+    waterTempStationId: '8449130',
     imageUrl: getBeachImageUrl('eastham'),
   },
   {
@@ -967,6 +1021,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 34.0359,
     longitude: -118.8781,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('el-matador'),
   },
   {
@@ -976,6 +1031,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.9192,
     longitude: -118.4165,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('el-segundo'),
   },
   {
@@ -985,6 +1041,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.0370,
     longitude: -117.2920,
     stationId: '9410170',
+    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('encinitas'),
   },
   {
@@ -994,6 +1051,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.9620,
     longitude: -82.3526,
     stationId: '8725110',
+    waterTempStationId: '8725520',
     imageUrl: getBeachImageUrl('englewood-beach'),
   },
   {
@@ -1003,6 +1061,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 38.4501,
     longitude: -75.0532,
     stationId: '8557380',
+    waterTempStationId: '8570283',
     imageUrl: getBeachImageUrl('fenwick-island'),
   },
   {
@@ -1012,6 +1071,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.6451,
     longitude: -73.1540,
     stationId: '8510560',
+    waterTempStationId: '8516945',
     imageUrl: getBeachImageUrl('fire-island'),
   },
   {
@@ -1021,6 +1081,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 29.4730,
     longitude: -81.1287,
     stationId: '8721164',
+    waterTempStationId: '8720218',
     imageUrl: getBeachImageUrl('flagler-beach'),
   },
   {
@@ -1030,6 +1091,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 43.9829,
     longitude: -124.1012,
     stationId: '9435380',
+    waterTempStationId: '9435380',
     imageUrl: getBeachImageUrl('florence-beach'),
   },
   {
@@ -1039,6 +1101,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.6552,
     longitude: -79.9403,
     stationId: '8665530',
+    waterTempStationId: '8665530',
     imageUrl: getBeachImageUrl('folly-beach'),
   },
   {
@@ -1048,6 +1111,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.1224,
     longitude: -80.1373,
     stationId: '8722670',
+    waterTempStationId: '8722956',
     imageUrl: getBeachImageUrl('fort-lauderdale'),
   },
   {
@@ -1057,6 +1121,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.4518,
     longitude: -81.9481,
     stationId: '8725110',
+    waterTempStationId: '8725520',
     imageUrl: getBeachImageUrl('fort-myers'),
   },
   {
@@ -1066,6 +1131,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.9533,
     longitude: -95.3099,
     stationId: '8772447',
+    waterTempStationId: '8772471',
     imageUrl: getBeachImageUrl('freeport-beach'),
   },
   {
@@ -1075,6 +1141,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.2382,
     longitude: -75.6235,
     stationId: '8654467',
+    waterTempStationId: '8654467',
     imageUrl: getBeachImageUrl('frisco'),
   },
   {
@@ -1084,6 +1151,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 29.3013,
     longitude: -94.7977,
     stationId: '8771450',
+    waterTempStationId: '8771450',
     imageUrl: getBeachImageUrl('galveston'),
   },
   {
@@ -1093,6 +1161,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 42.4071,
     longitude: -124.4218,
     stationId: '9431647',
+    waterTempStationId: '9431647',
     imageUrl: getBeachImageUrl('gold-beach'),
   },
   {
@@ -1102,6 +1171,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 42.6234,
     longitude: -70.6698,
     stationId: '8443970',
+    waterTempStationId: '8419870',
     imageUrl: getBeachImageUrl('good-harbor'),
   },
   {
@@ -1111,6 +1181,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 29.2633,
     longitude: -89.9570,
     stationId: '8761724',
+    waterTempStationId: '8761724',
     imageUrl: getBeachImageUrl('grand-isle'),
   },
   {
@@ -1120,6 +1191,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 30.2460,
     longitude: -87.7008,
     stationId: '8735180',
+    waterTempStationId: '8735180',
     imageUrl: getBeachImageUrl('gulf-shores'),
   },
   {
@@ -1129,6 +1201,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 37.4636,
     longitude: -122.4286,
     stationId: '9414290',
+    waterTempStationId: '9414750',
     imageUrl: getBeachImageUrl('half-moon-bay'),
   },
   {
@@ -1138,6 +1211,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 25.9812,
     longitude: -80.1484,
     stationId: '8723214',
+    waterTempStationId: '8722956',
     imageUrl: getBeachImageUrl('hallandale-beach'),
   },
   {
@@ -1147,6 +1221,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 42.9001,
     longitude: -70.8109,
     stationId: '8423898',
+    waterTempStationId: '8419870',
     imageUrl: getBeachImageUrl('hampton-beach'),
   },
   {
@@ -1156,6 +1231,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 21.2693,
     longitude: -157.6943,
     stationId: '1612340',
+    waterTempStationId: '1612340',
     imageUrl: getBeachImageUrl('hanauma-bay'),
   },
   {
@@ -1175,6 +1251,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.2118,
     longitude: -75.6974,
     stationId: '8654467',
+    waterTempStationId: '8654467',
     imageUrl: getBeachImageUrl('hatteras'),
   },
   {
@@ -1184,6 +1261,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.8622,
     longitude: -118.3998,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('hermosa-beach'),
   },
   {
@@ -1193,6 +1271,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.2163,
     longitude: -80.7526,
     stationId: '8670870',
+    waterTempStationId: '8670870',
     imageUrl: getBeachImageUrl('hilton-head'),
   },
   {
@@ -1212,6 +1291,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.0112,
     longitude: -80.1495,
     stationId: '8723214',
+    waterTempStationId: '8722956',
     imageUrl: getBeachImageUrl('hollywood-beach'),
   },
   {
@@ -1221,6 +1301,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.0653,
     longitude: -82.8276,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('honeymoon-island'),
   },
   {
@@ -1230,6 +1311,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.6595,
     longitude: -118.0000,
     stationId: '9410660',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('huntington'),
   },
   {
@@ -1239,6 +1321,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.5839,
     longitude: -117.1131,
     stationId: '9410170',
+    waterTempStationId: '9410170',
     imageUrl: getBeachImageUrl('imperial-beach'),
   },
   {
@@ -1248,6 +1331,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.8953,
     longitude: -82.8426,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('indian-rocks'),
   },
   {
@@ -1257,6 +1341,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.8564,
     longitude: -82.8476,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('indian-shores'),
   },
   {
@@ -1266,6 +1351,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 24.9243,
     longitude: -80.6278,
     stationId: '8723970',
+    waterTempStationId: '8723970',
     imageUrl: getBeachImageUrl('islamorada'),
   },
   {
@@ -1275,6 +1361,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.5926,
     longitude: -73.5087,
     stationId: '8510560',
+    waterTempStationId: '8516945',
     imageUrl: getBeachImageUrl('jones-beach'),
   },
   {
@@ -1284,6 +1371,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 43.3617,
     longitude: -70.4767,
     stationId: '8419317',
+    waterTempStationId: '8418150',
     imageUrl: getBeachImageUrl('kennebunk'),
   },
   {
@@ -1293,6 +1381,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 25.6926,
     longitude: -80.1631,
     stationId: '8723214',
+    waterTempStationId: '8723214',
     imageUrl: getBeachImageUrl('key-biscayne'),
   },
   {
@@ -1302,6 +1391,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 24.5551,
     longitude: -81.7800,
     stationId: '8724580',
+    waterTempStationId: '8724580',
     imageUrl: getBeachImageUrl('key-west'),
   },
   {
@@ -1311,6 +1401,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.6085,
     longitude: -80.0842,
     stationId: '8665530',
+    waterTempStationId: '8665530',
     imageUrl: getBeachImageUrl('kiawah-island'),
   },
   {
@@ -1320,6 +1411,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 36.0321,
     longitude: -75.6779,
     stationId: '8651370',
+    waterTempStationId: '8651370',
     imageUrl: getBeachImageUrl('kill-devil-hills'),
   },
   {
@@ -1329,6 +1421,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 36.0629,
     longitude: -75.7060,
     stationId: '8651370',
+    waterTempStationId: '8651370',
     imageUrl: getBeachImageUrl('kitty-hawk'),
   },
   {
@@ -1338,6 +1431,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.5427,
     longitude: -117.7854,
     stationId: '9410660',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('laguna'),
   },
   {
@@ -1347,6 +1441,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.8509,
     longitude: -117.2713,
     stationId: '9410170',
+    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('la-jolla'),
   },
   {
@@ -1356,6 +1451,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 21.3981,
     longitude: -157.7165,
     stationId: '1612340',
+    waterTempStationId: '1612480',
     imageUrl: getBeachImageUrl('lanikai'),
   },
   {
@@ -1365,6 +1461,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 47.9037,
     longitude: -124.6368,
     stationId: '9442396',
+    waterTempStationId: '9442396',
     imageUrl: getBeachImageUrl('la-push'),
   },
   {
@@ -1374,6 +1471,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 34.0459,
     longitude: -118.9381,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('leo-carrillo'),
   },
   {
@@ -1383,6 +1481,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.3153,
     longitude: -82.5826,
     stationId: '8726520',
+    waterTempStationId: '8726384',
     imageUrl: getBeachImageUrl('lido-key'),
   },
   {
@@ -1392,6 +1491,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 44.9579,
     longitude: -124.0179,
     stationId: '9435380',
+    waterTempStationId: '9435380',
     imageUrl: getBeachImageUrl('lincoln-city'),
   },
   {
@@ -1411,6 +1511,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 46.3523,
     longitude: -124.0540,
     stationId: '9440910',
+    waterTempStationId: '9441102',
     imageUrl: getBeachImageUrl('long-beach-peninsula'),
   },
   {
@@ -1420,6 +1521,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.4103,
     longitude: -82.6626,
     stationId: '8726520',
+    waterTempStationId: '8726384',
     imageUrl: getBeachImageUrl('longboat-key'),
   },
   {
@@ -1429,6 +1531,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.3043,
     longitude: -73.9923,
     stationId: '8531680',
+    waterTempStationId: '8531680',
     imageUrl: getBeachImageUrl('long-branch'),
   },
   {
@@ -1448,6 +1551,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.7970,
     longitude: -82.7976,
     stationId: '8726520',
+    waterTempStationId: '8726520',
     imageUrl: getBeachImageUrl('madeira-beach'),
   },
   {
@@ -1457,6 +1561,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 34.0259,
     longitude: -118.7798,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('malibu'),
   },
   {
@@ -1466,6 +1571,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.1168,
     longitude: -74.0365,
     stationId: '8531680',
+    waterTempStationId: '8531680',
     imageUrl: getBeachImageUrl('manasquan'),
   },
   {
@@ -1475,6 +1581,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.8847,
     longitude: -118.4109,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('manhattan-beach'),
   },
   {
@@ -1484,6 +1591,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.8847,
     longitude: -118.4109,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('manhattan-state-beach'),
   },
   {
@@ -1493,6 +1601,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 45.7179,
     longitude: -123.9340,
     stationId: '9435380',
+    waterTempStationId: '9440422',
     imageUrl: getBeachImageUrl('manzanita'),
   },
   {
@@ -1502,6 +1611,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 24.7137,
     longitude: -81.0865,
     stationId: '8723970',
+    waterTempStationId: '8723970',
     imageUrl: getBeachImageUrl('marathon'),
   },
   {
@@ -1511,6 +1621,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 25.9412,
     longitude: -81.7187,
     stationId: '8725110',
+    waterTempStationId: '8725520',
     imageUrl: getBeachImageUrl('marco-island'),
   },
   {
@@ -1520,6 +1631,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.3888,
     longitude: -70.6189,
     stationId: '8447930',
+    waterTempStationId: '8447930',
     imageUrl: getBeachImageUrl('marthas-vineyard'),
   },
   {
@@ -1529,6 +1641,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.6889,
     longitude: -95.9688,
     stationId: '8773259',
+    waterTempStationId: '8773146',
     imageUrl: getBeachImageUrl('matagorda'),
   },
   {
@@ -1538,6 +1651,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 39.3077,
     longitude: -123.7994,
     stationId: '9416841',
+    waterTempStationId: '9416841',
     imageUrl: getBeachImageUrl('mendocino'),
   },
   {
@@ -1547,6 +1661,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.7701,
     longitude: -117.2528,
     stationId: '9410170',
+    waterTempStationId: '9410170',
     imageUrl: getBeachImageUrl('mission-beach'),
   },
   {
@@ -1556,6 +1671,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.0485,
     longitude: -71.9579,
     stationId: '8510560',
+    waterTempStationId: '8510560',
     imageUrl: getBeachImageUrl('montauk'),
   },
   {
@@ -1565,6 +1681,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 36.6002,
     longitude: -121.8947,
     stationId: '9413450',
+    waterTempStationId: '9413450',
     imageUrl: getBeachImageUrl('monterey'),
   },
   {
@@ -1574,6 +1691,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.6253,
     longitude: -97.2169,
     stationId: '8775870',
+    waterTempStationId: '8775792',
     imageUrl: getBeachImageUrl('mustang-island'),
   },
   {
@@ -1583,6 +1701,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.9571,
     longitude: -75.6240,
     stationId: '8652587',
+    waterTempStationId: '8652587',
     imageUrl: getBeachImageUrl('nags-head'),
   },
   {
@@ -1592,6 +1711,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.2835,
     longitude: -70.0995,
     stationId: '8449130',
+    waterTempStationId: '8449130',
     imageUrl: getBeachImageUrl('nantucket'),
   },
   {
@@ -1601,6 +1721,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.1420,
     longitude: -81.7948,
     stationId: '8725110',
+    waterTempStationId: '8725520',
     imageUrl: getBeachImageUrl('naples'),
   },
   {
@@ -1610,6 +1731,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.4501,
     longitude: -71.4662,
     stationId: '8452660',
+    waterTempStationId: '8452660',
     imageUrl: getBeachImageUrl('narragansett'),
   },
   {
@@ -1619,6 +1741,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 29.0258,
     longitude: -80.9270,
     stationId: '8721164',
+    waterTempStationId: '8721604',
     imageUrl: getBeachImageUrl('new-smyrna'),
   },
   {
@@ -1628,6 +1751,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.6189,
     longitude: -117.9289,
     stationId: '9410660',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('newport-beach-ca'),
   },
   {
@@ -1637,6 +1761,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 44.6368,
     longitude: -124.0529,
     stationId: '9435380',
+    waterTempStationId: '9435380',
     imageUrl: getBeachImageUrl('newport-beach-or'),
   },
   {
@@ -1646,6 +1771,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.4901,
     longitude: -71.3128,
     stationId: '8452660',
+    waterTempStationId: '8452660',
     imageUrl: getBeachImageUrl('newport-beach-ri'),
   },
   {
@@ -1655,6 +1781,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.7533,
     longitude: -117.2528,
     stationId: '9410170',
+    waterTempStationId: '9410170',
     imageUrl: getBeachImageUrl('ocean-beach'),
   },
   {
@@ -1664,6 +1791,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 38.3365,
     longitude: -75.0849,
     stationId: '8570283',
+    waterTempStationId: '8570283',
     imageUrl: getBeachImageUrl('ocean-city-md'),
   },
   {
@@ -1673,6 +1801,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 39.2776,
     longitude: -74.5746,
     stationId: '8534720',
+    waterTempStationId: '8534720',
     imageUrl: getBeachImageUrl('ocean-city-nj'),
   },
   {
@@ -1682,6 +1811,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 46.9737,
     longitude: -124.1568,
     stationId: '9441102',
+    waterTempStationId: '9441102',
     imageUrl: getBeachImageUrl('ocean-shores'),
   },
   {
@@ -1691,6 +1821,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 43.2490,
     longitude: -70.5989,
     stationId: '8419317',
+    waterTempStationId: '8419870',
     imageUrl: getBeachImageUrl('ogunquit'),
   },
   {
@@ -1700,6 +1831,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 43.5170,
     longitude: -70.3770,
     stationId: '8418150',
+    waterTempStationId: '8418150',
     imageUrl: getBeachImageUrl('old-orchard'),
   },
   {
@@ -1709,6 +1841,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 30.2940,
     longitude: -87.5711,
     stationId: '8735180',
+    waterTempStationId: '8729840',
     imageUrl: getBeachImageUrl('orange-beach'),
   },
   {
@@ -1718,6 +1851,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.7901,
     longitude: -69.9897,
     stationId: '8447930',
+    waterTempStationId: '8449130',
     imageUrl: getBeachImageUrl('orleans'),
   },
   {
@@ -1727,6 +1861,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 29.2858,
     longitude: -81.0559,
     stationId: '8721164',
+    waterTempStationId: '8721604',
     imageUrl: getBeachImageUrl('ormond-beach'),
   },
   {
@@ -1736,6 +1871,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.7964,
     longitude: -117.2328,
     stationId: '9410170',
+    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('pacific-beach'),
   },
   {
@@ -1745,6 +1881,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 45.2029,
     longitude: -123.9629,
     stationId: '9435380',
+    waterTempStationId: '9435380',
     imageUrl: getBeachImageUrl('pacific-city'),
   },
   {
@@ -1754,6 +1891,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.5858,
     longitude: -97.2169,
     stationId: '8775870',
+    waterTempStationId: '8775792',
     imageUrl: getBeachImageUrl('padre-island'),
   },
   {
@@ -1763,6 +1901,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 30.1766,
     longitude: -85.8055,
     stationId: '8729108',
+    waterTempStationId: '8729210',
     imageUrl: getBeachImageUrl('panama-city'),
   },
   {
@@ -1772,6 +1911,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.6953,
     longitude: -82.7376,
     stationId: '8726520',
+    waterTempStationId: '8726520',
     imageUrl: getBeachImageUrl('pass-a-grille'),
   },
   {
@@ -1781,6 +1921,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.1428,
     longitude: -120.6413,
     stationId: '9412110',
+    waterTempStationId: '9413450',
     imageUrl: getBeachImageUrl('pismo-beach'),
   },
   {
@@ -1790,6 +1931,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 42.8151,
     longitude: -70.8198,
     stationId: '8443970',
+    waterTempStationId: '8419870',
     imageUrl: getBeachImageUrl('plum-island'),
   },
   {
@@ -1799,6 +1941,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 34.0059,
     longitude: -118.8081,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('point-dume'),
   },
   {
@@ -1808,6 +1951,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.0918,
     longitude: -74.0468,
     stationId: '8531680',
+    waterTempStationId: '8531680',
     imageUrl: getBeachImageUrl('point-pleasant'),
   },
   {
@@ -1817,6 +1961,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.2379,
     longitude: -80.1248,
     stationId: '8722670',
+    waterTempStationId: '8722956',
     imageUrl: getBeachImageUrl('pompano-beach'),
   },
   {
@@ -1826,6 +1971,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 29.8849,
     longitude: -93.9300,
     stationId: '8770822',
+    waterTempStationId: '8770475',
     imageUrl: getBeachImageUrl('port-arthur'),
   },
   {
@@ -1835,6 +1981,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.6150,
     longitude: -96.6300,
     stationId: '8773259',
+    waterTempStationId: '8773259',
     imageUrl: getBeachImageUrl('port-lavaca'),
   },
   {
@@ -1844,6 +1991,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 42.0526,
     longitude: -70.1710,
     stationId: '8446121',
+    waterTempStationId: '8447930',
     imageUrl: getBeachImageUrl('provincetown'),
   },
   {
@@ -1853,6 +2001,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.8153,
     longitude: -82.8176,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('redington-beach'),
   },
   {
@@ -1862,6 +2011,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.8253,
     longitude: -82.8276,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('redington-shores'),
   },
   {
@@ -1871,6 +2021,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.8492,
     longitude: -118.3892,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('redondo-beach'),
   },
   {
@@ -1880,6 +2031,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 38.7210,
     longitude: -75.0760,
     stationId: '8557380',
+    waterTempStationId: '8557380',
     imageUrl: getBeachImageUrl('rehoboth'),
   },
   {
@@ -1889,6 +2041,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 47.9204,
     longitude: -124.6368,
     stationId: '9442396',
+    waterTempStationId: '9442396',
     imageUrl: getBeachImageUrl('rialto-beach'),
   },
   {
@@ -1898,6 +2051,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.0219,
     longitude: -97.0544,
     stationId: '8774770',
+    waterTempStationId: '8774770',
     imageUrl: getBeachImageUrl('rockport'),
   },
   {
@@ -1907,6 +2061,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.5932,
     longitude: -75.4663,
     stationId: '8654467',
+    waterTempStationId: '8652587',
     imageUrl: getBeachImageUrl('rodanthe'),
   },
   {
@@ -1916,6 +2071,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 43.0101,
     longitude: -70.7709,
     stationId: '8423898',
+    waterTempStationId: '8419870',
     imageUrl: getBeachImageUrl('rye-beach'),
   },
   {
@@ -1925,6 +2081,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 42.8376,
     longitude: -70.8103,
     stationId: '8443970',
+    waterTempStationId: '8419870',
     imageUrl: getBeachImageUrl('salisbury-beach'),
   },
   {
@@ -1934,6 +2091,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.5432,
     longitude: -75.4763,
     stationId: '8654467',
+    waterTempStationId: '8652587',
     imageUrl: getBeachImageUrl('salvo'),
   },
   {
@@ -1943,6 +2101,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.4270,
     longitude: -117.6120,
     stationId: '9410660',
+    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('san-clemente'),
   },
   {
@@ -1952,6 +2111,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.4487,
     longitude: -82.1126,
     stationId: '8725110',
+    waterTempStationId: '8725520',
     imageUrl: getBeachImageUrl('sanibel'),
   },
   {
@@ -1961,6 +2121,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 39.1532,
     longitude: -74.6932,
     stationId: '8536110',
+    waterTempStationId: '8536110',
     imageUrl: getBeachImageUrl('sea-isle-city'),
   },
   {
@@ -1970,6 +2131,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 45.9932,
     longitude: -123.9226,
     stationId: '9435380',
+    waterTempStationId: '9440422',
     imageUrl: getBeachImageUrl('seaside-beach'),
   },
   {
@@ -1979,6 +2141,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 39.9443,
     longitude: -74.0726,
     stationId: '8531680',
+    waterTempStationId: '8531680',
     imageUrl: getBeachImageUrl('seaside-heights'),
   },
   {
@@ -1998,6 +2161,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.2639,
     longitude: -82.5431,
     stationId: '8726520',
+    waterTempStationId: '8726384',
     imageUrl: getBeachImageUrl('siesta-key'),
   },
   {
@@ -2007,6 +2171,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.9911,
     longitude: -117.2712,
     stationId: '9410170',
+    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('solana-beach'),
   },
   {
@@ -2016,6 +2181,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 25.7907,
     longitude: -80.1300,
     stationId: '8723214',
+    waterTempStationId: '8723214',
     imageUrl: getBeachImageUrl('south-beach'),
   },
   {
@@ -2025,6 +2191,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 36.1293,
     longitude: -75.7360,
     stationId: '8651370',
+    waterTempStationId: '8651370',
     imageUrl: getBeachImageUrl('southern-shores'),
   },
   {
@@ -2034,6 +2201,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 26.1118,
     longitude: -97.1669,
     stationId: '8779770',
+    waterTempStationId: '8779748',
     imageUrl: getBeachImageUrl('south-padre'),
   },
   {
@@ -2043,6 +2211,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.1532,
     longitude: -74.0282,
     stationId: '8531680',
+    waterTempStationId: '8531680',
     imageUrl: getBeachImageUrl('spring-lake'),
   },
   {
@@ -2052,6 +2221,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 29.8572,
     longitude: -81.2650,
     stationId: '8720030',
+    waterTempStationId: '8720218',
     imageUrl: getBeachImageUrl('st-augustine'),
   },
   {
@@ -2061,6 +2231,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 37.9002,
     longitude: -122.6433,
     stationId: '9414290',
+    waterTempStationId: '9414863',
     imageUrl: getBeachImageUrl('stinson-beach'),
   },
   {
@@ -2070,6 +2241,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 39.0507,
     longitude: -74.7596,
     stationId: '8536110',
+    waterTempStationId: '8536110',
     imageUrl: getBeachImageUrl('stone-harbor'),
   },
   {
@@ -2079,6 +2251,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.7253,
     longitude: -82.7426,
     stationId: '8726520',
+    waterTempStationId: '8726520',
     imageUrl: getBeachImageUrl('st-pete-beach'),
   },
   {
@@ -2088,6 +2261,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 25.9423,
     longitude: -80.1234,
     stationId: '8723214',
+    waterTempStationId: '8722956',
     imageUrl: getBeachImageUrl('sunny-isles'),
   },
   {
@@ -2107,6 +2281,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.9447,
     longitude: -95.2899,
     stationId: '8772447',
+    waterTempStationId: '8772471',
     imageUrl: getBeachImageUrl('surfside-beach'),
   },
   {
@@ -2116,6 +2291,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 28.1461,
     longitude: -82.7568,
     stationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('tarpon-springs'),
   },
   {
@@ -2125,6 +2301,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.9629,
     longitude: -72.1851,
     stationId: '8510560',
+    waterTempStationId: '8510560',
     imageUrl: getBeachImageUrl('the-hamptons'),
   },
   {
@@ -2134,6 +2311,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.9278,
     longitude: -117.2542,
     stationId: '9410170',
+    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('torrey-pines'),
   },
   {
@@ -2143,6 +2321,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.7692,
     longitude: -82.7693,
     stationId: '8726520',
+    waterTempStationId: '8726520',
     imageUrl: getBeachImageUrl('treasure-island'),
   },
   {
@@ -2152,6 +2331,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.9901,
     longitude: -70.0597,
     stationId: '8447930',
+    waterTempStationId: '8447930',
     imageUrl: getBeachImageUrl('truro'),
   },
   {
@@ -2161,6 +2341,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 32.0002,
     longitude: -80.8454,
     stationId: '8670870',
+    waterTempStationId: '8670870',
     imageUrl: getBeachImageUrl('tybee-island'),
   },
   {
@@ -2170,6 +2351,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.0998,
     longitude: -82.4543,
     stationId: '8726520',
+    waterTempStationId: '8726384',
     imageUrl: getBeachImageUrl('venice-fl'),
   },
   {
@@ -2179,6 +2361,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.9850,
     longitude: -118.4695,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('venice'),
   },
   {
@@ -2188,6 +2371,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 36.8529,
     longitude: -75.9780,
     stationId: '8638610',
+    waterTempStationId: '8639348',
     imageUrl: getBeachImageUrl('virginia-beach'),
   },
   {
@@ -2197,6 +2381,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.5532,
     longitude: -75.4663,
     stationId: '8654467',
+    waterTempStationId: '8652587',
     imageUrl: getBeachImageUrl('waves'),
   },
   {
@@ -2206,6 +2391,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.9376,
     longitude: -70.0328,
     stationId: '8447930',
+    waterTempStationId: '8447930',
     imageUrl: getBeachImageUrl('wellfleet'),
   },
   {
@@ -2215,6 +2401,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 43.3220,
     longitude: -70.5798,
     stationId: '8419317',
+    waterTempStationId: '8419870',
     imageUrl: getBeachImageUrl('wells-beach'),
   },
   {
@@ -2224,6 +2411,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 38.9918,
     longitude: -74.8149,
     stationId: '8536110',
+    waterTempStationId: '8536110',
     imageUrl: getBeachImageUrl('wildwood'),
   },
   {
@@ -2233,6 +2421,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 43.1701,
     longitude: -70.6098,
     stationId: '8419317',
+    waterTempStationId: '8419870',
     imageUrl: getBeachImageUrl('york-beach'),
   },
   {
@@ -2242,6 +2431,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 34.0159,
     longitude: -118.8231,
     stationId: '9410840',
+    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('zuma-beach'),
   },
 ];
