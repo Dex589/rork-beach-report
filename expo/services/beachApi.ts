@@ -289,9 +289,10 @@ async function fetchSurfData(lat: number, lon: number): Promise<SurfData> {
 async function fetchWaterQuality(beach: Beach): Promise<WaterQuality> {
   if (beach.waterTempStationId) {
     try {
-      const now = new Date();
-      const dateStr = now.toISOString().split('T')[0].replace(/-/g, '');
-      const url = `${NOAA_TIDES_API}?product=water_temperature&application=NOS.COOPS.TAC.WL&begin_date=${dateStr}&range=1&station=${beach.waterTempStationId}&time_zone=lst_ldt&units=english&format=json`;
+      // `date=latest` returns the single most recent observation. Using
+      // `begin_date`+`range` instead would anchor to midnight and return
+      // stale overnight readings, which is what caused the wrong value.
+      const url = `${NOAA_TIDES_API}?product=water_temperature&application=NOS.COOPS.TAC.WL&date=latest&station=${beach.waterTempStationId}&time_zone=lst_ldt&units=english&format=json`;
       
       console.log('[Water] Fetching water temp from NOAA station', beach.waterTempStationId);
       const controller = new AbortController();
@@ -311,9 +312,11 @@ async function fetchWaterQuality(beach: Beach): Promise<WaterQuality> {
         const latestReading = data.data[data.data.length - 1];
         const temp = parseFloat(latestReading.v);
         if (!isNaN(temp)) {
-          console.log('[Water] NOAA water temperature:', temp, '°F');
+          // Preserve one decimal of precision to match NOAA exactly (e.g. 67.8).
+          const rounded = Math.round(temp * 10) / 10;
+          console.log('[Water] NOAA water temperature:', rounded, '°F');
           return {
-            temperature: Math.round(temp),
+            temperature: rounded,
           };
         }
       }
@@ -325,7 +328,10 @@ async function fetchWaterQuality(beach: Beach): Promise<WaterQuality> {
   }
 
   try {
-    const url = `${OPEN_METEO_MARINE_API}?latitude=${beach.latitude}&longitude=${beach.longitude}&current=ocean_surface_temperature&temperature_unit=fahrenheit`;
+    // NOTE: the correct Open-Meteo marine variable is `sea_surface_temperature`.
+    // The previous code requested `ocean_surface_temperature`, which is not a
+    // valid variable and made this request error out every time.
+    const url = `${OPEN_METEO_MARINE_API}?latitude=${beach.latitude}&longitude=${beach.longitude}&current=sea_surface_temperature&temperature_unit=fahrenheit`;
     
     console.log('[Water] Fetching water temp from Open-Meteo for lat:', beach.latitude, 'lon:', beach.longitude);
     const response = await fetch(url);
@@ -335,24 +341,28 @@ async function fetchWaterQuality(beach: Beach): Promise<WaterQuality> {
     const data = await response.json();
     console.log('[Water] Open-Meteo Response:', data);
 
-    if (data.current && typeof data.current.ocean_surface_temperature === 'number') {
-      const temp = Math.round(data.current.ocean_surface_temperature);
+    if (data.current && typeof data.current.sea_surface_temperature === 'number') {
+      const temp = Math.round(data.current.sea_surface_temperature * 10) / 10;
       console.log('[Water] Open-Meteo water temperature:', temp, '°F');
       return {
         temperature: temp,
       };
     }
     
-    console.log('[Water] No valid ocean_surface_temperature in response, using fallback');
-    return {
-      temperature: 72 + Math.random() * 10,
-    };
+    console.log('[Water] No valid sea_surface_temperature in response, using last known value');
   } catch (error) {
-    console.log('[Water] Using fallback water quality data due to API error:', error);
-    return {
-      temperature: 72 + Math.random() * 10,
-    };
+    console.log('[Water] Open-Meteo water temp error, using last known value:', error);
   }
+
+  // Last resort: never fabricate a number. Reuse the last real reading we
+  // cached for this beach; if there is none, surface the failure so the
+  // caller falls back to fully cached conditions instead of showing fake data.
+  const cached = await readCachedConditions(beach.id);
+  if (cached?.waterQuality && typeof cached.waterQuality.temperature === 'number') {
+    console.log('[Water] Using last cached water temperature:', cached.waterQuality.temperature, '°F');
+    return cached.waterQuality;
+  }
+  throw new Error('Water temperature unavailable from all sources');
 }
 
 function getWeatherCondition(code: number): string {
