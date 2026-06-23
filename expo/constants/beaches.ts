@@ -651,7 +651,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 30.3960,
     longitude: -88.8853,
     stationId: '8747437',
-    waterTempStationId: '8741533',
     imageUrl: getBeachImageUrl('biloxi-beach'),
   },
   {
@@ -771,7 +770,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.9270,
     longitude: -70.0461,
     stationId: '8447930',
-    waterTempStationId: '8447930',
     imageUrl: getBeachImageUrl('cape-cod'),
   },
   {
@@ -941,7 +939,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.4673,
     longitude: -117.6981,
     stationId: '9410660',
-    waterTempStationId: '9410230',
     imageUrl: getBeachImageUrl('dana-point'),
   },
   {
@@ -1071,7 +1068,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.6451,
     longitude: -73.1540,
     stationId: '8510560',
-    waterTempStationId: '8516945',
     imageUrl: getBeachImageUrl('fire-island'),
   },
   {
@@ -1311,7 +1307,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.6595,
     longitude: -118.0000,
     stationId: '9410660',
-    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('huntington'),
   },
   {
@@ -1361,7 +1356,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 40.5926,
     longitude: -73.5087,
     stationId: '8510560',
-    waterTempStationId: '8516945',
     imageUrl: getBeachImageUrl('jones-beach'),
   },
   {
@@ -1431,7 +1425,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.5427,
     longitude: -117.7854,
     stationId: '9410660',
-    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('laguna'),
   },
   {
@@ -1551,7 +1544,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.7970,
     longitude: -82.7976,
     stationId: '8726520',
-    waterTempStationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('madeira-beach'),
   },
   {
@@ -1751,7 +1744,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 33.6189,
     longitude: -117.9289,
     stationId: '9410660',
-    waterTempStationId: '9410840',
     imageUrl: getBeachImageUrl('newport-beach-ca'),
   },
   {
@@ -1911,7 +1903,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.6953,
     longitude: -82.7376,
     stationId: '8726520',
-    waterTempStationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('pass-a-grille'),
   },
   {
@@ -1921,7 +1913,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 35.1428,
     longitude: -120.6413,
     stationId: '9412110',
-    waterTempStationId: '9413450',
     imageUrl: getBeachImageUrl('pismo-beach'),
   },
   {
@@ -1991,7 +1982,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 42.0526,
     longitude: -70.1710,
     stationId: '8446121',
-    waterTempStationId: '8447930',
     imageUrl: getBeachImageUrl('provincetown'),
   },
   {
@@ -2251,7 +2241,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.7253,
     longitude: -82.7426,
     stationId: '8726520',
-    waterTempStationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('st-pete-beach'),
   },
   {
@@ -2321,7 +2311,7 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 27.7692,
     longitude: -82.7693,
     stationId: '8726520',
-    waterTempStationId: '8726520',
+    waterTempStationId: '8726724',
     imageUrl: getBeachImageUrl('treasure-island'),
   },
   {
@@ -2331,7 +2321,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.9901,
     longitude: -70.0597,
     stationId: '8447930',
-    waterTempStationId: '8447930',
     imageUrl: getBeachImageUrl('truro'),
   },
   {
@@ -2391,7 +2380,6 @@ const ALL_BEACHES_BASE: Beach[] = [
     latitude: 41.9376,
     longitude: -70.0328,
     stationId: '8447930',
-    waterTempStationId: '8447930',
     imageUrl: getBeachImageUrl('wellfleet'),
   },
   {
