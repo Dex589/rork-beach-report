@@ -317,6 +317,7 @@ async function fetchWaterQuality(beach: Beach): Promise<WaterQuality> {
           console.log('[Water] NOAA water temperature:', rounded, '°F');
           return {
             temperature: rounded,
+            source: `NOAA #${beach.waterTempStationId}`,
           };
         }
       }
@@ -346,6 +347,7 @@ async function fetchWaterQuality(beach: Beach): Promise<WaterQuality> {
       console.log('[Water] Open-Meteo water temperature:', temp, '°F');
       return {
         temperature: temp,
+        source: 'Open-Meteo',
       };
     }
     

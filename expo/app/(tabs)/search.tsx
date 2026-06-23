@@ -87,9 +87,15 @@ export default function SearchScreen() {
           disabled={inHome}
         >
           {inHome ? (
-            <Check size={20} color="#10B981" />
+            <>
+              <Check size={20} color="#10B981" />
+              <Text style={styles.addedLabel}>Added</Text>
+            </>
           ) : (
-            <Plus size={20} color="#0EA5E9" />
+            <>
+              <Plus size={20} color="#0EA5E9" />
+              <Text style={styles.addLabel}>Add</Text>
+            </>
           )}
         </TouchableOpacity>
       </View>
@@ -242,9 +248,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#EFF6FF',
+    gap: 2,
   },
   addedButton: {
     backgroundColor: '#F0FDF4',
+  },
+  addLabel: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: '#0EA5E9',
+  },
+  addedLabel: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: '#10B981',
   },
   loadingContainer: {
     flex: 1,

@@ -319,6 +319,9 @@ export default function HomeScreen() {
               <View style={styles.infoCard}>
                 <Droplets size={20} color="#0EA5E9" />
                 <Text style={styles.infoText}>{conditions.waterQuality.temperature.toFixed(1)}°F</Text>
+                {conditions.waterQuality.source ? (
+                  <Text style={styles.infoSource}>{conditions.waterQuality.source}</Text>
+                ) : null}
               </View>
             </View>
 
@@ -765,6 +768,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600' as const,
     color: '#1E293B',
+  },
+  infoSource: {
+    marginLeft: 'auto' as const,
+    fontSize: 11,
+    fontWeight: '500' as const,
+    color: '#94A3B8',
   },
   uvProtectionCard: {
     backgroundColor: '#FEF3E2',

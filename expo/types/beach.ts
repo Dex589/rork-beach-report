@@ -35,6 +35,8 @@ export interface SurfData {
 export interface WaterQuality {
   temperature: number;
   salinity?: number;
+  /** Where the water temperature reading came from. */
+  source?: string;
 }
 
 export interface SunData {
